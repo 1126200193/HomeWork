@@ -7,7 +7,7 @@
 <title>正在注册中...</title>
 </head>
 <body>
-	<%//123
+	<%//123切换master分支
 request.setCharacterEncoding("utf-8");
 String number=request.getParameter("number");
 String name=request.getParameter("name");
