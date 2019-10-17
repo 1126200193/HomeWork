@@ -7,7 +7,7 @@
 	<title>欢迎登陆</title>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/login.js"></script -->
+    <script src="js/login.js"></script>
     <script> 
       var error = '<%=request.getParameter("error")%>';
        if(error=='yes'){
@@ -16,6 +16,7 @@
     </script>
  <script> 
     function checkform(){
+    	//123
       var number=document.login.number.value;
       var password=document.login.password.value;
       var inputCode = document.getElementById("checkNum").value.toUpperCase();
