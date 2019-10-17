@@ -16,6 +16,7 @@
     </script>
  <script> 
     function checkform(){
+    	//1234
       var number=document.login.number.value;
       var password=document.login.password.value;
       var inputCode = document.getElementById("checkNum").value.toUpperCase();
