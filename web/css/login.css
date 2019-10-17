@@ -1,8 +1,8 @@
-body {
-	background: url(../image/beijing.png);
-	background-size: cover;
-	background-attachment: fixed;
-}
+/*body {*/
+/*	!*background: url(../image/beijing.png);*!*/
+/*	background-size: cover;*/
+/*	background-attachment: fixed;*/
+/*}*/
 
 span {
 	color: #fff;
@@ -36,7 +36,7 @@ option {
 	width: 100%;
 	height: 40px;
 	text-align: center;
-	font-family: "ËÎÌå";
+	font-family: "ï¿½ï¿½ï¿½ï¿½";
 	font-size: 26px;
 	font-weight: bolder;
 	color: #fff;
@@ -113,7 +113,7 @@ option {
 
 .right-h2 {
 	color: #fff;
-	font-family: 'ËÎÌå';
+	font-family: 'ï¿½ï¿½ï¿½ï¿½';
 	font-size: 24px;
 	font-weight: bolder;
 }

@@ -113,7 +113,7 @@ document.getElementById("checkCode").innerHTML = code;
        
       	  <div class="left-box1">
       	  	  <div class="imgbox"><img src="image/logo.jpg" alt="" width="100%" height="100%"></div>
-      	  	  <h2 class="h2">教务管理系统</h2>
+      	  	  <h2 class="h2">社区管理系统</h2>
       	  </div>
 
       	  <div class="center-shu"></div>
@@ -139,13 +139,6 @@ document.getElementById("checkCode").innerHTML = code;
       	     </div>
       	     
       	        <div class="right-text1">
-             <table width="521" height="37" >
-             <tr>
-             <td ><span >验 证:</span>
-               <input type="text" value="" id="checkNum" >
-             <a href="javascript:void(0);"><div id="checkCode" onclick="createCode()";></div></a></td>
-             </tr>
-             </table>
              </div>
        
               <div class="right-centerbox1">
