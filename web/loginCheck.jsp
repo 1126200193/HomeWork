@@ -24,35 +24,59 @@
         return;
     }
 
-    String sql = "select * from user where username='" +username+"'" +" and password='"+password+"'";
-    System.out.println(sql);
-    ResultSet rs;
-    rs = db.executeQuery(sql);
-    if (rs == null) {
-        db.close();
-        msg = "数据库操作发生错误！";
-        out.print(msg);
-        return;
-    }
+    if (type.equals("admin")){
+        String sql = "select * from admin where username='" +username+"'" +" and password='"+password+"'";
+        System.out.println(sql);
+        ResultSet rs;
+        rs = db.executeQuery(sql);
+        if (rs == null) {
+            db.close();
+            msg = "数据库操作发生错误！";
+            out.print(msg);
+            return;
+        }
 
-    if (rs.next() == false)	{							//没有查询到符合条件的记录
-        msg = "<script>alert('登录失败！您的用户名或者密码有误。');";
-        msg += "window.history.back();</script>";		//登录失败则后退到登录页面
-        out.print(msg);
+        if (rs.next() == false)	{							//没有查询到符合条件的记录
+            msg = "<script>alert('登录失败！您的用户名或者密码有误。');";
+            msg += "window.history.back();</script>";		//登录失败则后退到登录页面
+            out.print(msg);
+            db.close();
+            return;
+        }
+        user.setId(rs.getInt("id"));
+        user.setUsername(rs.getString("username"));
+        user.setPassword(rs.getString("password"));
+        user.setType(type);
         db.close();
-        return;
-    }
-    user.setId(rs.getInt("id"));
-    user.setUsername(rs.getString("username"));
-    user.setPassword(rs.getString("password"));
-    user.setType(rs.getString("type"));
-    db.close();
-    session.setAttribute("user", user);
-
-    if(user.getType().equals("Owner")){
-        response.sendRedirect("Owner.jsp");
+        session.setAttribute("admin", user);
+        response.sendRedirect("User.jsp");
     }else{
+        String sql = "select * from owner where username='" +username+"'" +" and password='"+password+"'";
+        System.out.println(sql);
+        ResultSet rs;
+        rs = db.executeQuery(sql);
+        if (rs == null) {
+            db.close();
+            msg = "数据库操作发生错误！";
+            out.print(msg);
+            return;
+        }
+
+        if (rs.next() == false)	{							//没有查询到符合条件的记录
+            msg = "<script>alert('登录失败！您的用户名或者密码有误。');";
+            msg += "window.history.back();</script>";		//登录失败则后退到登录页面
+            out.print(msg);
+            db.close();
+            return;
+        }
+        user.setId(rs.getInt("id"));
+        user.setUsername(rs.getString("username"));
+        user.setPassword(rs.getString("password"));
+        user.setType(type);
+        db.close();
+        session.setAttribute("owner", user);
         response.sendRedirect("Owner.jsp");
     }
+
 
 %>

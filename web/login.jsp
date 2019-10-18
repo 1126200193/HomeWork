@@ -101,7 +101,7 @@
       	     <h2 class="right-h2">用户登录</h2>
       	     <div class="right-text">
       	     	<span>账 号:</span>
-      	     	<input type="text" autocomplete="off" placeholder="请输入您的学号/账号" id="user" name="username"/>
+      	     	<input type="text" autocomplete="off" placeholder="请输入您的学号/账号" id="User" name="username"/>
       	     </div>
 
       	     <div class="right-text1">
