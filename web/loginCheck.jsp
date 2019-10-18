@@ -1,10 +1,4 @@
-<%@ page import="java.sql.ResultSet" %><%--
-  Created by IntelliJ IDEA.
-  User: afa
-  Date: 2019/10/18
-  Time: 11:46
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.sql.ResultSet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="dao.db" %>
 <%@ page import="bean.*" %>
@@ -24,10 +18,10 @@
         return;
     }
     if(username.trim().equals("") || password.trim().equals("") || type.trim().equals("")){
-    msg = "<script>alert('请输入用户名！');";		//弹出警告框
-    msg += "window.history.back();</script>";		//网页后退
-    out.print(msg);
-    return;
+        msg = "<script>alert('请输入用户名！');";		//弹出警告框
+        msg += "window.history.back();</script>";		//网页后退
+        out.print(msg);
+        return;
     }
 
     String sql = "select * from user where username='" +username+"'" +" and passowrd='"+password+"'";
