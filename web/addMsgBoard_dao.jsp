@@ -18,7 +18,7 @@
 
     if(msg==null || msg.equals("")){
         msg = "<script>alert('内容不能为空');";
-        msg += "window.history.back();</script>";		//登录失败则后退到登录页面
+        msg += "window.history.back();</script>";
         out.print(msg);
         return;
     }

@@ -34,7 +34,7 @@
             </a>
         </div>
         <div class="nav-tit">
-            <a href="login.jsp" target="_parent"> <img
+            <a href="loginOut.jsp" target="_parent"> <img
                     src="image/modify-password.png" alt=""> <span>用户系统退出</span>
             </a>
         </div>
