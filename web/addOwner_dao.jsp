@@ -1,11 +1,12 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: afa
-  Date: 2019/10/18
-  Time: 21:33
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="bean.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-
+    User user =(User) session.getAttribute("admin");
+    String msg="";
+    if(user==null){
+        msg = "<script>alert('请先登录');";
+        msg += "window.location.href = 'login.jsp';</script>";
+        out.print(msg);
+        return;
+    }
 %>
