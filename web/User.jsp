@@ -23,7 +23,7 @@
 </head>
 <frameset frameborder="0" rows="60,*">
     <frame src="UserTop.jsp" noresize="noresize" scrolling="no" />
-    <frameset frameborder="0" cols="210,*">
+    <frameset frameborder="0" cols="180,*">
         <frame src="UserLeft.jsp" noresize="noresize" scrolling="no" />
         <frame noresize="noresize" scrolling="yes" name="main" />
         <!-- <frame noresize="noresize" scrolling="no" name="main"  src="首页.html"/> -->

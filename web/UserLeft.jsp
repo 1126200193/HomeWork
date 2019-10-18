@@ -17,19 +17,19 @@
 <div class="nav">
     <div class="nav-list">
         <div class="nav-tit" id="personal">
-            <a href="Stu_message1.jsp" target="main"> <img
+            <a href="FindOwner.jsp" target="main"> <img
                     src="image/personal-msg.png" style="height: 30px" alt=""> <span>业主信息管理</span>
             </a>
         </div>
         <div class="personal-list" id="personal-child">
             <ul>
-                <li><a href="schedule1.jsp" target="main">业主信息查询</a></li>
-                <li><a href="Entry.jsp" target="main">业主信息录入</a></li>
-                <li><a href="Stu_message1.jsp" target="main">业主信息修改</a></li>
+                <li><a href="FindOwner.jsp" target="main">业主信息查询</a></li>
+                <li><a href="addOwner.jsp" target="main">业主信息录入</a></li>
+                <li><a href="update.jsp" target="main">业主信息修改</a></li>
             </ul>
         </div>
         <div class="nav-tit">
-            <a href="admin_words.jsp" target="main"> <img
+            <a href="complainOwner.jsp" target="main"> <img
                     src="image/personal-msg.png" alt=""> <span>查看业主投诉</span>
             </a>
         </div>
