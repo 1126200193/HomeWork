@@ -52,14 +52,14 @@
           // 获取指定key本地存储的值
           var strPass = localStorage.getItem('keyPass');
           if(strName){
-              $('#user').val(strName);
+              $('#User').val(strName);
           }if(strPass){
               $('#pass').val(strPass);
           }
    
       });
        function CheckForm(){
-            var strName = $('#user').val();
+            var strName = $('#User').val();
             var strPass = $('#pass').val();
             localStorage.setItem('keyName',strName);
             // 将value存储到key字段
