@@ -24,8 +24,7 @@
     db.close();
     if(i==1){
         //插入成功
-
-
+        response.sendRedirect("User.jsp");
     }else{
         msg = "<script>alert('插入数据失败！');";
         msg += "window.history.back();</script>";
