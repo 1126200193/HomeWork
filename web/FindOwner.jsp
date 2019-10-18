@@ -142,15 +142,15 @@
             </td>
         </tr>
         <tr>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span>
+            <td class="mes_td_style"><span>1</span></td>
+            <td class="mes_td_style"><span>yezhu1</span></td>
+            <td class="mes_td_style"><span>yezhu1</span></td>
+            <td class="mes_td_style"><span>李小龙</span></td>
+            <td class="mes_td_style"><span>418</span></td>
+            <td class="mes_td_style"><span>2147483647</span></td>
+            <td class="mes_td_style"><span>312</span></td>
+            <td class="mes_td_style"><span>250</span></td>
+            <td class="mes_td_style">
                   <a href="revise2.jsp">
                      <img src="image/bianji.png">
                   </a>
