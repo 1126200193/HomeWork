@@ -15,7 +15,7 @@ public class db {
     //private String password = "123456"; 			// 数据库密码的初始值
 
     //如果是连接MySQL：jdbc:mysql://localhost:3306/mysqlDBName，com.mysql.jdbc.Driver，添加库mysql-connector-java-5.1.21-bin.jar
-    private static String connString	= "jdbc:mysql://localhost:3306/sq?useSSL=false";
+    private static String connString	= "jdbc:mysql://67.230.161.191:3306/sq?useSSL=false";
     private static String driver 		= "com.mysql.jdbc.Driver";
 
     private static String userName = "root";    	// 数据库用户名的初始值

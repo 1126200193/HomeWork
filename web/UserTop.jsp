@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2019/10/18
-  Time: 12:08
+  Time: 14:42
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -60,11 +60,12 @@
 <body>
 <div class="bx">
     <div class="container">
-        <h3 class="left">社 区 管 理 系 统</h3>
+        <h3 class="left">后 台 管 理 系 统</h3>
         <div class="right">
-            <marquee scrollAmount=6 width=100% class="marquee">欢迎登陆社区管理系统！如发现信息存在问题！请向管理员反馈！</marquee>
+            <marquee scrollAmount=6 width=100% class="marquee">亲爱的管理员！欢迎登陆社区管理系统！请按规定进行操做！</marquee>
         </div>
     </div>
 </div>
 </body>
 </html>
+

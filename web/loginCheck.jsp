@@ -52,7 +52,7 @@
     if(user.getType().equals("Owner")){
         response.sendRedirect("Owner.jsp");
     }else{
-        response.sendRedirect("login.jsp");
+        response.sendRedirect("Owner.jsp");
     }
 
 %>

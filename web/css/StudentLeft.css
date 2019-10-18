@@ -9,10 +9,11 @@ body,html {
 }
 
 .nav {
-	width: 210px;
+	width: 180px;
 	height: 100%;
-	background: #3b3b3b;
-	color: #c1c1c1;
+/*	background: #3b3b3b;*/
+	background-color: rgba(64,158,255,0.8);
+	color: #FFFFFF;
 }
 
 .nav .nav-list {
@@ -28,9 +29,12 @@ body,html {
 	text-align: center;
 	border-radius: 5px;
 }
+.nav .nav-list .nav-tit  span{
+   color:#FFFFFF;
+}
 
 .nav .nav-list .nav-tit:hover {
-	background: #0e8384;
+	background: rgba(144,147,153,0.8);
 }
 
 .nav .nav-list .nav-tit a {
@@ -40,7 +44,7 @@ body,html {
 
 .nav .nav-list .nav-tit img {
 	width: 21px;
-	height: 21px;
+	height: 30px;
 	vertical-align: middle;
 }
 
@@ -51,7 +55,7 @@ body,html {
 .nav .nav-list .personal-list {
 	width: 90px;
 	height: 80px;
-	margin-left: 30px;
+	margin-left: 20px;
 	margin-bottom: 40px;
 	font-size: 14px;
 	display: none;
