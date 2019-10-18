@@ -30,7 +30,7 @@
     return;
     }
 
-    String sql = "select * from admin where number='" +username+"'" +" and passowrd='"+password+"'";
+    String sql = "select * from admin where username='" +username+"'" +" and passowrd='"+password+"'";
     ResultSet rs;
     rs = db.executeQuery(sql);
     if (rs == null) {
@@ -48,7 +48,7 @@
         return;
     }
     user.setId(rs.getInt(0));
-    user.setUsername(rs.getString("number"));
+    user.setUsername(rs.getString("username"));
     user.setPassword(rs.getString("password"));
     db.close();
     user.setType(type);
