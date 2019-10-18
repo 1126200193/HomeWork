@@ -30,7 +30,7 @@
     return;
     }
 
-    String sql = "select * from admin where username='" +username+"'" +" and passowrd='"+password+"'";
+    String sql = "select * from user where username='" +username+"'" +" and passowrd='"+password+"'";
     ResultSet rs;
     rs = db.executeQuery(sql);
     if (rs == null) {
