@@ -19,7 +19,7 @@ public class db {
     private static String driver 		= "com.mysql.jdbc.Driver";
 
     private static String userName = "root";    	// 数据库用户名的初始值
-    private static String password = "root123456"; 	// 数据库密码的初始值
+    private static String password = "123456"; 	// 数据库密码的初始值
 
     private static Connection getConnecion() { 		// 创建数据库连接
         Connection myConn = null;

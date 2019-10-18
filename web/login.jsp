@@ -17,12 +17,11 @@
  <script> 
     function checkform(){
     	//1234
-      var number=document.login.number.value;
+      var username=document.login.username.value;
       var password=document.login.password.value;
-      var inputCode = document.getElementById("checkNum").value.toUpperCase();
-      if(number==''){
+      if(username==''){
            alert("您的账号不能为空！");
-           document.login.number.focus();
+           document.login.username.focus();
            return false;
       }
       if(password==''){
@@ -30,21 +29,11 @@
         document.login.password.focus();
         return false;
       }
-      if(inputCode.length <=0) {
-        alert("请输入验证码!");
-        return false;
-     }
-     if(inputCode != code ){
-        alert("验证码输入错误!");
-        createCode();
-        return false;
-     }
      else{
     	 document.login.target="_self ";
-    	 document.login.action="LoginServlet";
+    	 document.login.action="loginCheck.jsp";
     	 document.login.submit();
      }
- }
 }
   $(document).ready(function(){
      
@@ -112,7 +101,7 @@
       	     <h2 class="right-h2">用户登录</h2>
       	     <div class="right-text">
       	     	<span>账 号:</span>
-      	     	<input type="text" autocomplete="off" placeholder="请输入您的学号/账号" id="user" name="number"/>
+      	     	<input type="text" autocomplete="off" placeholder="请输入您的学号/账号" id="user" name="username"/>
       	     </div>
 
       	     <div class="right-text1">
@@ -123,8 +112,8 @@
       	  	 <div class="right-text1" >
       	      	<span>身 份:</span>
       	     	<select name="type" id="" >
-      	     		<option value="Stu" name="type" selected="selected" >学生</option>
-      	     		<option value="Admin" name="type">管理员</option>
+      	     		<option value="Owner" name="type" selected="selected" >业主</option>
+      	     		<option value="admin" name="type">管理员</option>
       	     	</select>
       	     </div>
       	     
@@ -151,8 +140,7 @@
       	                 <input type="reset" value="忘记密码" class="submit" onclick="return myfunction();"> 
       	                 <script>
                              function myfunction(){
-                                window.open("revise.jsp");
-                                window.close("login.jsp");
+                                 alert("正在开发中。。。");
                              }
       	                 </script>
       	             </div>

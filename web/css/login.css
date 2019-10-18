@@ -53,7 +53,7 @@ option {
 	margin-top: -240px;
 	margin-left: -390px;
 	border-radius: 15px;
-	background: rgba(69, 152, 205, 0.8);
+	background: rgba(69, 152, 205,0.5);
 }
 
 .left-box1 {
@@ -108,7 +108,7 @@ option {
 .right-onbox1 {
 	width: 100%;
 	position: absolute;
-	top: 154%;
+	top: 135%;
 }
 
 .right-h2 {

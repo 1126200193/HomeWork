@@ -24,7 +24,8 @@
         return;
     }
 
-    String sql = "select * from user where username='" +username+"'" +" and passowrd='"+password+"'";
+    String sql = "select * from user where username='" +username+"'" +" and password='"+password+"'";
+    System.out.println(sql);
     ResultSet rs;
     rs = db.executeQuery(sql);
     if (rs == null) {
@@ -41,13 +42,17 @@
         db.close();
         return;
     }
-    user.setId(rs.getInt(0));
+    user.setId(rs.getInt("id"));
     user.setUsername(rs.getString("username"));
     user.setPassword(rs.getString("password"));
+    user.setType(rs.getString("type"));
     db.close();
-    user.setType(type);
     session.setAttribute("user", user);
 
-    response.sendRedirect("login.jsp");
+    if(user.getType().equals("Owner")){
+        response.sendRedirect("Owner.jsp");
+    }else{
+        response.sendRedirect("login.jsp");
+    }
 
 %>
