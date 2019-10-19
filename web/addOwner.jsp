@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2019/10/18
-  Time: 15:16
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -76,7 +69,9 @@
                 document.update.idNumber.focus();
                 return false;
             }else{
-                
+                document.update.target="_self ";
+                document.update.action="addOwner_dao.jsp";
+                document.update.submit();
             }
         }
     </script>

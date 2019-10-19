@@ -1,11 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2019/10/18
-  Time: 16:36
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="dao.db" %>
+<%@ page import="bean.Owner" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+
+    request.setCharacterEncoding("utf-8");
+    response.setCharacterEncoding("utf-8");
+    String query = request.getParameter("query");
+    String select = request.getParameter("select");
+    boolean search = true;
+    if(query==null || query.trim().equals("") || select==null || select.trim().equals(""))
+        search = false;
+%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -86,16 +92,15 @@
     }
 </style>
 <body>
-<form action="Stu_message1.jsp" id="form1" name="form1" method="post"
+<form action="FindOwner.jsp" id="form1" name="form1" method="post"
       target="_self">
     <table width="100%" border="2" bordercolor="#99ccff" cellspacing="2" cellpadding="2" align="center">
         <tr>
             <td  align="center" class="td_style"><span
                     class="psize1" name="select">请选择查询的类型：</span>
                 <select name="select" id="select">
-                <option value="xuehao" selected>学号</option>
-                <option value="xingming">姓名</option>
-                <option value="xingbie">性别</option>
+                <option value="roomNumber" selected>业主房号</option>
+                <option value="name">业主姓名</option>
             </select>
             </td>
             <td  align="center" class="td_style">
@@ -141,28 +146,55 @@
                 <span class="psize1">删除</span>
             </td>
         </tr>
+        <%
+            String sql = "";
+            if(search){
+                sql = "select * from owner where  "+select+" LIKE '%"+query+"%'";
+            }else{
+                sql = "select * from owner";
+            }
+            System.out.println(sql);
+            ResultSet rs = db.executeQuery(sql);
+            int i=1;
+            Owner owner = new Owner();
+            while (rs.next()){
+                owner.setId(rs.getInt("id"));
+                owner.setUsername(rs.getString("username"));
+                owner.setName(rs.getString("name"));
+                owner.setRoomNumber(rs.getInt("roomNumber"));
+                owner.setIdNumber(rs.getString("idNumber"));
+                owner.setWaterBill(rs.getFloat("waterBill"));
+                owner.setElectricBill(rs.getFloat("electricBill"));
+                owner.setPassword(rs.getString("password"));
+        %>
         <tr>
-            <td class="mes_td_style"><span>1</span></td>
-            <td class="mes_td_style"><span>yezhu1</span></td>
-            <td class="mes_td_style"><span>yezhu1</span></td>
-            <td class="mes_td_style"><span>李小龙</span></td>
-            <td class="mes_td_style"><span>418</span></td>
-            <td class="mes_td_style"><span>2147483647</span></td>
-            <td class="mes_td_style"><span>312</span></td>
-            <td class="mes_td_style"><span>250</span></td>
+            <td class="mes_td_style"><span><%=i%></span></td>
+            <td class="mes_td_style"><span><%=owner.getUsername()%></span></td>
+            <td class="mes_td_style"><span><%=owner.getPassword()%></span></td>
+            <td class="mes_td_style"><span><%=owner.getName()%></span></td>
+            <td class="mes_td_style"><span><%=owner.getRoomNumber()%></span></td>
+            <td class="mes_td_style"><span><%=owner.getIdNumber()%></span></td>
+            <td class="mes_td_style"><span><%=owner.getElectricBill()%>元</span></td>
+            <td class="mes_td_style"><span><%=owner.getWaterBill()%>元</span></td>
             <td class="mes_td_style">
-                  <a href="revise2.jsp">
-                     <img src="image/bianji.png">
-                  </a>
+                <a href="revise2.jsp?id=<%=owner.getId()%>">
+                    <img src="image/bianji.png">
+                </a>
             </td>
             <td>
                 <span class="psize2">
-                    <a href="delete_messServlet">
+                    <a href="deleteOwner.jsp?id=<%=owner.getId()%>">
                         <img src="image/del.jpg">
                     </a>
                 </span>
             </td>
         </tr>
+        <%
+            i++;
+            }
+            rs.close();
+            db.close();
+        %>
     </table>
 </form>
 

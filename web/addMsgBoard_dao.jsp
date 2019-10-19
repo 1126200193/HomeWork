@@ -28,6 +28,7 @@
     String date  = ft.format(new Date());
 
     ResultSet rs = db.executeQuery("select name from owner where username = '"+user.getUsername()+"'");
+    rs.next();
     String name = rs.getString("name");
     db.close();
 
