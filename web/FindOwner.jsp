@@ -177,7 +177,7 @@
             <td class="mes_td_style"><span><%=owner.getElectricBill()%>元</span></td>
             <td class="mes_td_style"><span><%=owner.getWaterBill()%>元</span></td>
             <td class="mes_td_style">
-                <a href="revise2.jsp?id=<%=owner.getId()%>">
+                <a href="update.jsp?id=<%=owner.getId()%>">
                     <img src="image/bianji.png">
                 </a>
             </td>

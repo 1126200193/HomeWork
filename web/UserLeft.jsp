@@ -25,7 +25,6 @@
             <ul>
                 <li><a href="FindOwner.jsp" target="main">业主信息查询</a></li>
                 <li><a href="addOwner.jsp" target="main">业主信息录入</a></li>
-                <li><a href="update.jsp" target="main">业主信息修改</a></li>
             </ul>
         </div>
         <div class="nav-tit">
