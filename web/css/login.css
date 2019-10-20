@@ -148,7 +148,7 @@ option {
 	height: 100%;
 	line-height: 30px;
 	text-align: center;
-	background: #4fadeb;
+	background: rgba(64,158,255,0.7);
 	font-size: 18px;
 	color: #fff;
 	cursor: pointer;
