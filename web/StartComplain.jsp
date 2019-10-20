@@ -114,8 +114,7 @@
                 <label for="textfield2"> 投诉内容：</label>
             </td>
             <td  align="left" >
-                <input type="text" name="message" id="message">
-<%--                <textarea rows="4" name="message" id="message" class="textareastyle"></textarea>--%>
+            <textarea rows="4" name="message" id="message" class="textareastyle"></textarea>
             </td>
         </tr>
         <tr>
