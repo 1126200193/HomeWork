@@ -35,6 +35,11 @@
             </a>
         </div>
         <div class="nav-tit">
+            <a href="showImage.jsp" target="main"> <img
+                    src="image/archives-msg.png" alt=""> <span>图片展示</span>
+            </a>
+        </div>
+        <div class="nav-tit">
             <a href="loginOut.jsp" target="_parent"> <img
                     src="image/modify-password.png" alt=""> <span>退出系统</span>
             </a>
