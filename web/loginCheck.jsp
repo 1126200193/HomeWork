@@ -48,7 +48,7 @@
         user.setPassword(rs.getString("password"));
         user.setType(type);
         db.close();
-        session.setAttribute("admin", username);
+        session.setAttribute("admin", user);
         response.sendRedirect("User.jsp");
     }else{
         String sql = "select * from owner where username='" +username+"'" +" and password='"+password+"'";
@@ -74,7 +74,7 @@
         user.setPassword(rs.getString("password"));
         user.setType(type);
         db.close();
-        session.setAttribute("owner",username);
+        session.setAttribute("owner",user);
         response.sendRedirect("Owner.jsp");
     }
 

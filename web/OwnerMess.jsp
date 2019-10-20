@@ -55,8 +55,9 @@
 <body>
 <%
     request.setCharacterEncoding("utf-8");
-    String username=(String)session.getAttribute("owner");
-    String sql = "select * from owner where username='" +username+"'";
+    User user = (User) session.getAttribute("owner") ;
+
+    String sql = "select * from owner where username='" +user.getUsername()+"'";
     ResultSet rs;
     rs = db.executeQuery(sql);
     rs.next();
