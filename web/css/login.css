@@ -1,9 +1,4 @@
-/*body {*/
-/*	!*background: url(../image/beijing.png);*!*/
-/*	background-size: cover;*/
-/*	background-attachment: fixed;*/
-/*}*/
-/*commit*/
+
 span {
 	color: #fff;
 	font-size: 20px;
@@ -53,13 +48,12 @@ option {
 	margin-top: -240px;
 	margin-left: -390px;
 	border-radius: 15px;
-	background: rgba(69, 152, 205,0.5);
+	background: rgba(190,144,85,0.7);
 }
 
 .left-box1 {
 	width: 40%;
 	height: 100%;
-	/*       	border: 2px solid #d2d; */
 	position: relative;
 }
 

@@ -92,7 +92,7 @@
        <div class="login-box">
        
       	  <div class="left-box1">
-      	  	  <div class="imgbox"><img src="image/newlogo.png" alt="" width="100%" height="100%"></div>
+      	  	  <div class="imgbox"><img src="image/login_logo.png" alt="" width="100%" height="100%"></div>
       	  	  <h2 class="h2">社区管理系统</h2>
       	  </div>
 
