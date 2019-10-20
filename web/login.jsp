@@ -102,12 +102,12 @@
       	     <h2 class="right-h2">用户登录</h2>
       	     <div class="right-text">
       	     	<span>账 号:</span>
-      	     	<input type="text" autocomplete="off" placeholder="请输入您的学号/账号" id="User" name="username"/>
+      	     	<input type="text" autocomplete="off" placeholder="请输入您的学号/账号" id="username" name="username"/>
       	     </div>
 
       	     <div class="right-text1">
       	     	<span>密 码:</span>
-      	     	<input type="password" autocomplete="off" placeholder="请输入您的密码" id="pass" name="password"/>
+      	     	<input type="password" autocomplete="off" placeholder="请输入您的密码" id="password" name="password"/>
       	     </div>
 
       	  	 <div class="right-text1" >

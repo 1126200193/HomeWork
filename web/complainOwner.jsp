@@ -3,15 +3,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>欢迎光临学生信息中心</title>
 </head>
-<script>
-    var error = '<%=request.getParameter("error")%>';
-    if(error=='yes'){
-        alert("修改成功！");
-    }
-    else if(error=='del'){
-        alert("删除成功！");
-    }
-</script>
 <style>
     span {
         font-size: 20px;
@@ -84,30 +75,22 @@
            cellpadding="4" align="center">
         <tr>
             <td  align="center" class="td_style" style="width:50px;">
-                <span class="psize1">序号</span>
+                <span>序号</span>
+            </td>
+            <td  align="center" class="td_style" style="width: 180px;">
+                <span>业主姓名</span>
             </td>
             <td  align="center" class="td_style">
-                <span class="psize1">业主账号</span>
+                <span>投诉内容</span>
             </td>
-            <td  align="center" class="td_style">
-                <span class="psize1">业主名字</span>
+            <td  align="center" class="td_style" style="width: 180px;">
+                <span>投诉时间</span>
             </td>
-            <td  align="center" class="td_style">
-                <span class="psize1">业主房间号</span>
-            </td>
-            <td  align="center" class="td_style">
-                <span class="psize1">业主身份证</span>
-            </td>
-            <td  align="center" class="td_style">
-                <span class="psize1">投诉内容</span>
-            </td>
-            <td  align="center" class="td_style">
-                <span class="psize1">删除</span>
+            <td  align="center" class="td_style" style="width:80px;">
+                <span>操作</span>
             </td>
         </tr>
         <tr>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span></span></td>
             <td class="mes_td_style"><span></span></td>
             <td class="mes_td_style"><span></span></td>
             <td class="mes_td_style"><span></span></td>

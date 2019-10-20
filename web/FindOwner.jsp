@@ -46,6 +46,7 @@
         background-color:rgba(64,158,255,0.8);
         height:25px;
         color:#ffffff;
+        font-size:16px;
     }
     .input1 {
         width: 200px;
@@ -115,7 +116,7 @@
     <table width="100%" border="2" bordercolor="#99ccff" cellspacing="4"
            cellpadding="4" align="center">
         <tr>
-            <td  align="center" class="td_style" style="width:50px;">
+            <td  align="center" class="td_style" style="width:40px;">
                 <span class="psize1">序号</span>
             </td>
             <td  align="center" class="td_style">

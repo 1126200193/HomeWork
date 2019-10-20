@@ -17,7 +17,7 @@
 <div class="nav">
     <div class="nav-list">
         <div class="nav-tit" id="personal">
-            <a href="person_mes.jsp" target="main"> <img
+            <a href="OwnerMess.jsp" target="main"> <img
                     src="image/personal-msg.png" style="height: 30px" alt=""> <span>个人信息</span>
             </a>
         </div>
@@ -30,7 +30,7 @@
             </ul>
         </div>--%>
         <div class="nav-tit">
-            <a href="words.jsp" target="main"> <img
+            <a href="StartComplain.jsp" target="main"> <img
                     src="image/personal-msg.png" alt=""> <span>投诉系统</span>
             </a>
         </div>
