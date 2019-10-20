@@ -1,3 +1,5 @@
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="dao.db" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -90,19 +92,32 @@
                 <span>操作</span>
             </td>
         </tr>
+        <%
+            String sql = "select * from messageBoard";
+            ResultSet rs = db.executeQuery(sql);
+            int i = 1;
+            while(rs.next()){
+
+
+        %>
         <tr>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span></span></td>
-            <td class="mes_td_style"><span></span></td>
+            <td class="mes_td_style"><span><%=i++%></span></td>
+            <td class="mes_td_style"><span><%=rs.getString("name")%></span></td>
+            <td class="mes_td_style"><span><%=rs.getString("message")%></span></td>
+            <td class="mes_td_style"><span><%=rs.getString("time")%></span></td>
             <td>
                 <span class="psize2">
-                    <a href="delete_messServlet">
+                    <a href="delete_mess.jsp?id=<%=rs.getInt("id")%>">
                         <img src="image/del.jpg">
                     </a>
                 </span>
             </td>
         </tr>
+        <%
+            }
+            rs.close();
+            db.close();
+        %>
     </table>
 </form>
 

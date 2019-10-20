@@ -5,7 +5,7 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-
+    request.setCharacterEncoding("utf-8");
     String msg="";
     User user =(User) session.getAttribute("owner");
     String message = request.getParameter("message");
@@ -16,7 +16,7 @@
         return;
     }
 
-    if(msg==null || msg.equals("")){
+    if(message==null || message.equals("")){
         msg = "<script>alert('内容不能为空');";
         msg += "window.history.back();</script>";
         out.print(msg);
@@ -37,12 +37,13 @@
     db.close();
     if(row==1){
         //插入成功
-
+        msg = "<script>alert('提交成功！');";
+        msg += "window.history.back();</script>";
+        out.print(msg);
     }else{
         msg = "<script>alert('插入数据失败！');";
         msg += "window.history.back();</script>";
         out.print(msg);
-        db.close();
         return;
     }
 
